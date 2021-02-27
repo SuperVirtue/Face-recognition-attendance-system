@@ -203,27 +203,27 @@ void MainWindow::ReadFrame_1()
 
            //这里还有一个任务，需要把打卡时间和工号存到表内。
 
-           if(dbconn.open())
-           {
-                 qDebug() << "数据库连接成功!";
+           //if(dbconn.open())
+           //{
+           //      qDebug() << "数据库连接成功!";
 
-                 QSqlQuery query(dbconn);
+           //      QSqlQuery query(dbconn);
 
-                 QString sqlStr = "";
+           //      QString sqlStr = "";
 
-                 sqlStr += QString("INSERT INTO employee_information.employee_attendance_record(Job_number,name,Attendance_time,status,remarks) VALUES('%1','%2',%3,'%4','%5')")
-                         .arg();
+           //      sqlStr += QString("INSERT INTO employee_information.employee_attendance_record(Job_number,name,Attendance_time,status,remarks) VALUES('%1','%2',%3,'%4','%5')")
+           //              .arg();
 
-                 query.exec(sqlStr);
+           //      query.exec(sqlStr);
 
-                 dbconn.close();
-           }
-           else
-           {
-                qDebug() << "数据库连接失败!";
-                QMessageBox::information(NULL, "Warning", "数据库连接失败!");
-                return ;
-           }
+           //      dbconn.close();
+           //}
+           //else
+           //{
+           //     qDebug() << "数据库连接失败!";
+           //     QMessageBox::information(NULL, "Warning", "数据库连接失败!");
+           //     return ;
+           //}
 
    }
 
